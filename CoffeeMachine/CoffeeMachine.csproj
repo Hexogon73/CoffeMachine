@@ -59,8 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banknote.cs" />
+    <Compile Include="Coint.cs" />
     <Compile Include="DictionaryRecipe.cs" />
     <Compile Include="Manager.cs" />
+    <Compile Include="Money.cs" />
     <Compile Include="MoneyReceiver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

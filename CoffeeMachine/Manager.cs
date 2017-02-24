@@ -12,7 +12,7 @@ namespace CoffeeMachine
         }
 
         public void PrepareOrder(string name_recipe){
-            ShowRecipe(name_recipe);
+            //ShowRecipe(name_recipe);
         }
 
     }

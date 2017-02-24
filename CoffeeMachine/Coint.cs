@@ -5,12 +5,11 @@ using System.Text;
 
 namespace CoffeeMachine
 {
-    class SystemReceivingCoins : PaymentSystem
+    class Coint : Money
     {
-        public int SetMoney(Coint coins)
+        public Coint(int _value)
         {
-            sum += coins.value;
-            return sum;
+            value = _value;
         }
     }
 }

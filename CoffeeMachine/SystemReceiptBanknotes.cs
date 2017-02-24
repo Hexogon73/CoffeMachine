@@ -7,5 +7,10 @@ namespace CoffeeMachine
 {
     class SystemReceiptBanknotes : PaymentSystem
     {
+        public int SetMoney(Banknote banknotes)
+        {
+            sum += banknotes.value;
+            return sum;
+        }
     }
 }
