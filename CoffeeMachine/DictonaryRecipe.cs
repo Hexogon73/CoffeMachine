@@ -32,6 +32,42 @@ namespace CoffeeMachine
             };
         }
 
+        public int GetPrice(string recipe){
+            int price;
+            if (dictionary.ContainsKey(recipe))
+            {
+                Console.WriteLine("* " + recipe + " *");
+                foreach (var v in dictionary[recipe])
+                {
+                    if (v.Key == "цена")
+                    {
+                        Console.WriteLine("{0}:\t {1}", v.Key, v.Value);
+                        price = v.Value;
+                        return price;
+                    }
+                } 
+            }
+            else
+            {
+                Console.WriteLine("рецепт '{0}' не обнаружен", recipe);
+                price = -1;
+                return price;
+            }
+            return -1;
+        }
+
+        public void GetAllPrice() {
+            foreach (var v in dictionary)
+            {
+                Console.WriteLine("* " + v.Key + " *");
+                foreach (var k in dictionary[v.Key])
+                {
+                    if (k.Key=="цена")
+                    Console.WriteLine("{0}:\t {1}", k.Key, k.Value);
+                }
+            }
+        }
+
         public void ShowAllRecipe()
         {
             Console.WriteLine("Список рецептов:");
@@ -41,14 +77,24 @@ namespace CoffeeMachine
             }
         }
 
-        public void ShowRecipe(string recipe)
+        public bool ShowRecipe(string recipe)
         {
-            Console.WriteLine("* " + recipe + " *");
-            Console.WriteLine("{0}, {1}", "ингредиент", "количество");
-            foreach (var v in dictionary[recipe])
+            if (dictionary.ContainsKey(recipe))
             {
-                Console.WriteLine("{0}:\t {1}", v.Key, v.Value);
+                    Console.WriteLine("* " + recipe + " *");
+                    Console.WriteLine("{0}, {1}", "ингредиент", "количество");
+                    foreach (var v in dictionary[recipe])
+                    {
+                        Console.WriteLine("{0}:\t {1}", v.Key, v.Value);
+                    }
+                    return true;
             }
+            else
+            {
+                Console.WriteLine("рецепт '{0}' не обнаружен",recipe);
+                return false;
+            }
+
         }
 
         public void ShowRecipeEnoughMoney(int money)

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace CoffeeMachine
 {
-    class SystemReceiptBanknotes : PaymentSystem
+    class SystemReceiptBanknotes : MoneyReceiver
     {
-        public int SetMoney(Banknote banknotes)
+        public int AddMoney(Banknote banknotes)
         {
             sum += banknotes.value;
             return sum;

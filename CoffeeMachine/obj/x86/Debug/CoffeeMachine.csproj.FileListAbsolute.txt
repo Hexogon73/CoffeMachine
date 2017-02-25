@@ -1,6 +1,5 @@
-﻿C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe
+C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.pdb
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.exe
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.pdb
-C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe.config

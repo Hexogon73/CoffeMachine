@@ -7,37 +7,16 @@ namespace CoffeeMachine
 {
     class PaymentSystem
     {
-        protected int sum;
-        protected int num;
-        List<Money> mList = new List<Money>();
-
-        public virtual void SetMoney(Money money)
-        {
-            mList.Add(money);
-        }
-
-        public void ShowListMoney()
-        {
-            Console.WriteLine("Список номиналов монет и купюр внесенных покупателем:");
-            for (int i = 0; i < mList.Count; i++)
+        public void PayOrder(int order_cost, MoneyReceiver mr) {
+            int residue;
+            if (mr.sum >= order_cost)
             {
-                Console.WriteLine("{0}: {1}", i + 1, mList[i].value);
+                residue = mr.sum - order_cost;
+                Console.WriteLine("Оставшиеся сумма: {0}", residue);
             }
-        }
-
-        public void ShowSumMoney()
-        {
-            int sum = mList.Sum(x => x.value);
-            Console.WriteLine("Сумма номиналов монет и банкнот в системе: {0}", sum);
-        }
-
-        public void ShowNumberMoney()
-        {
-            foreach (Money m in mList)
-            {
-                num = mList.Count();
-            }
-            Console.WriteLine("Количество монет и банкнот в системе: {0}", num);
+            else {
+                Console.WriteLine("Внесенной суммы:{0} не хватает на оплату заказа", mr.sum);
+            }  
         }
     }
 }

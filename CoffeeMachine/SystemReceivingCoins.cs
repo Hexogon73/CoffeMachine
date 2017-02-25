@@ -5,9 +5,9 @@ using System.Text;
 
 namespace CoffeeMachine
 {
-    class SystemReceivingCoins : PaymentSystem
+    class SystemReceivingCoins : MoneyReceiver
     {
-        public int SetMoney(Coint coins)
+        public int AddMoney(Coint coins)
         {
             sum += coins.value;
             return sum;

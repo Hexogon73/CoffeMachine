@@ -7,15 +7,17 @@ namespace CoffeeMachine
 {
     class Manager
     {
-        public void GetAllRecept()
+        public void GetAllRecept(DictionaryRecipe dr)
         {
-
+            dr.ShowAllRecipe();
         }
 
-        public void PrepareOrder(string name_recipe)
+        public void PrepareOrder(string name_recipe, DictionaryRecipe dr, PaymentSystem ps, MoneyReceiver mr)
         {
-            //ShowRecipe(name_recipe);
+           if (dr.ShowRecipe(name_recipe) == true) {
+               int order_cost = dr.GetPrice(name_recipe);
+               ps.PayOrder(order_cost, mr);
+           }
         }
-
     }
 }
