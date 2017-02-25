@@ -16,7 +16,7 @@ namespace CoffeeMachine
 
             Console.WriteLine("----------");
 
-            Coint c1=new Coint(5);
+            Coint c1 = new Coint(5);
             Banknote b1 = new Banknote(100);
             Banknote b2 = new Banknote(50);
             PaymentSystem p1 = new PaymentSystem();

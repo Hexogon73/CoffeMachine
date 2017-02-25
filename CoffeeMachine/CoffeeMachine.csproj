@@ -54,14 +54,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
+	<Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banknote.cs" />
     <Compile Include="Coint.cs" />
-    <Compile Include="DictionaryRecipe.cs" />
+    <Compile Include="DictonaryRecipe.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Money.cs" />
     <Compile Include="MoneyReceiver.cs" />
@@ -93,9 +93,6 @@
       <ProductName>Установщик Windows 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -32,7 +32,8 @@ namespace CoffeeMachine
             };
         }
 
-        public void ShowAllRecipe(){
+        public void ShowAllRecipe()
+        {
             Console.WriteLine("Список рецептов:");
             foreach (var v in dictionary)
             {
@@ -40,8 +41,9 @@ namespace CoffeeMachine
             }
         }
 
-        public void ShowRecipe(string recipe) {
-            Console.WriteLine("* "+recipe+" *");
+        public void ShowRecipe(string recipe)
+        {
+            Console.WriteLine("* " + recipe + " *");
             Console.WriteLine("{0}, {1}", "ингредиент", "количество");
             foreach (var v in dictionary[recipe])
             {
@@ -49,17 +51,15 @@ namespace CoffeeMachine
             }
         }
 
-        public void ShowRecipeEnoughMoney(int money) {
-            Console.WriteLine("внесенной суммы "+money+" хватет на:");
+        public void ShowRecipeEnoughMoney(int money)
+        {
+            Console.WriteLine("внесенной суммы " + money + " хватет на:");
             foreach (var v in dictionary)
             {
                 //TODO: сравнение цены всех рецептов с внесенной суммой и вывод тех которые <= 
                 //if(){
                 //}
-                foreach (var j in dictionary.Values)
-                {
-                    //ShowRecipe(j.Keys);
-                }
+                ShowRecipe(v.Key);
             }
         }
     }

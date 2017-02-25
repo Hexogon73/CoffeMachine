@@ -7,11 +7,13 @@ namespace CoffeeMachine
 {
     class Manager
     {
-        public void GetAllRecept(){
+        public void GetAllRecept()
+        {
 
         }
 
-        public void PrepareOrder(string name_recipe){
+        public void PrepareOrder(string name_recipe)
+        {
             //ShowRecipe(name_recipe);
         }
 
