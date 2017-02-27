@@ -7,6 +7,8 @@ namespace CoffeeMachine
 {
     class Money
     {
-        public int value;
+        public int val;
+
+        public int Val { get { return val; } set { val = value;} }
     }
 }

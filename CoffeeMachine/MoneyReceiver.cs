@@ -14,7 +14,7 @@ namespace CoffeeMachine
         public virtual int AddMoney(Money money)
         {
             mList.Add(money);
-            sum += money.value;
+            sum += money.Val;
             return sum;
         }
 
@@ -23,13 +23,13 @@ namespace CoffeeMachine
             Console.WriteLine("Список номиналов монет и купюр внесенных покупателем:");
             for (int i = 0; i < mList.Count; i++)
             {
-                Console.WriteLine("{0}: {1}", i + 1, mList[i].value);
+                Console.WriteLine("{0}: {1}", i + 1, mList[i].Val);
             }
         }
 
         public void ShowSumMoney()
         {
-            int sum = mList.Sum(x => x.value);
+            int sum = mList.Sum(x => x.Val);
             Console.WriteLine("Сумма номиналов монет и банкнот в системе: {0}", sum);
         }
 

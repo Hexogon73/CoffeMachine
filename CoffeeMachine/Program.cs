@@ -30,18 +30,28 @@ namespace CoffeeMachine
 
             Console.WriteLine("----------");
 
-            d1.GetAllPrice();
-            d1.GetPrice("капучино");
+            d1.ShowAllPrice();
             int k = d1.GetPrice("капучино");
             Console.WriteLine(k);
+            d1.ShowRecipeEnoughMoney(30);
+            d1.ShowRecipeEnoughMoney(90);
+
+            Console.WriteLine("----------");
+            //ResourceBase
+            ResourceBase rb1 = new ResourceBase();
+            rb1.GetResource("кофе");
+            rb1.GetPortion("кофе", 100); rb1.GetResource("кофе");
+            rb1.SetResource("кофе", 2000); rb1.GetResource("кофе");
+            rb1.ShowAllResource();
 
             Console.WriteLine("----------");
 
             Manager m1 = new Manager();
-            m1.PrepareOrder("капучино", d1, p1, mr1);
-            m1.PrepareOrder("капучин", d1, p1, mr1);
+            m1.PrepareOrder("капучино", d1, p1, mr1, rb1);
+            m1.PrepareOrder("капучин", d1, p1, mr1, rb1);
 
-            Console.WriteLine("----------");
+            d1.GetRecipe("капучино");
+            d1.GetRecipe("капучио");
 
             Console.ReadKey();
         }

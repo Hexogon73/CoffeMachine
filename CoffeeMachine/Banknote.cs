@@ -8,7 +8,7 @@ namespace CoffeeMachine
     class Banknote : Money
     {
         public Banknote(int _value) {
-            value = _value;
+            val = _value;
         }
     }
 }

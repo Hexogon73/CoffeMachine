@@ -9,7 +9,7 @@ namespace CoffeeMachine
     {
         public Coint(int _value)
         {
-            value = _value;
+            val = _value;
         }
     }
 }

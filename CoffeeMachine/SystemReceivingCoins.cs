@@ -9,7 +9,7 @@ namespace CoffeeMachine
     {
         public int AddMoney(Coint coins)
         {
-            sum += coins.value;
+            sum += coins.Val;
             return sum;
         }
     }

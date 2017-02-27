@@ -7,7 +7,7 @@ namespace CoffeeMachine
 {
     class DictionaryRecipe
     {
-        public Dictionary<string, Dictionary<string, int>> dictionary = BuildDictionary();
+        private Dictionary<string, Dictionary<string, int>> dictionary = BuildDictionary();
 
         private static Dictionary<string, Dictionary<string, int>> BuildDictionary()
         {
@@ -56,7 +56,7 @@ namespace CoffeeMachine
             return -1;
         }
 
-        public void GetAllPrice() {
+        public void ShowAllPrice() {
             foreach (var v in dictionary)
             {
                 Console.WriteLine("* " + v.Key + " *");
@@ -99,14 +99,40 @@ namespace CoffeeMachine
 
         public void ShowRecipeEnoughMoney(int money)
         {
-            Console.WriteLine("внесенной суммы " + money + " хватет на:");
+            string name_recipe;
+            Dictionary<string, int> dict = new Dictionary<string, int>();
+
+            Console.WriteLine("Внесенной суммы {0} достаточно для:", money);
             foreach (var v in dictionary)
             {
-                //TODO: сравнение цены всех рецептов с внесенной суммой и вывод тех которые <= 
-                //if(){
-                //}
-                ShowRecipe(v.Key);
+                dict = v.Value;
+                foreach (var k in dict)
+                {
+                    if (k.Key == "цена" && k.Value <= money)
+                    {
+                        name_recipe = v.Key;
+                        Console.WriteLine("{0}: {1}", name_recipe, k.Value);
+                    }
+                }
             }
+        }
+
+        public KeyValuePair<string, Dictionary<string, int>> GetRecipe(string name_recipe){
+            KeyValuePair<string, Dictionary<string, int>> recipe = new KeyValuePair<string,Dictionary<string,int>>();
+            foreach (var v in dictionary){
+                if (v.Key == name_recipe)
+                {
+                    recipe = v;
+                    Console.WriteLine("Получен рецепт:{0}{1}", recipe.Key, recipe.Value);
+                    break;
+                }
+                else {
+                    Console.WriteLine("рецепт '{0}' не обнаружен", name_recipe);
+                    //throw new Exception("Длина строки больше 6 символов");
+                    break;
+                }
+            }
+            return recipe;
         }
     }
 }
