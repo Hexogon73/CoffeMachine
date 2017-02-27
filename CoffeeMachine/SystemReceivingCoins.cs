@@ -7,9 +7,10 @@ namespace CoffeeMachine
 {
     class SystemReceivingCoins : MoneyReceiver
     {
-        public int AddMoney(Coint coins)
+        public override int AddMoney(Money coins)
         {
             sum += coins.Val;
+            num += 1;
             return sum;
         }
     }

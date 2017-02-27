@@ -3,3 +3,8 @@ C:\Documents and Settings\Сергей Админ\Мои документы\Visu
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.exe
 C:\Documents and Settings\Сергей Админ\Мои документы\Visual Studio 2010\Projects\CoffeeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\CoffeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\CoffeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\CoffeMachine\CoffeeMachine\obj\x86\Debug\CoffeeMachine.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\CoffeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\CoffeMachine\CoffeeMachine\bin\Debug\CoffeeMachine.pdb

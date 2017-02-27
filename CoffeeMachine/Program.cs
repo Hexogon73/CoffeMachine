@@ -17,16 +17,22 @@ namespace CoffeeMachine
             Console.WriteLine("----------");
 
             Coint c1 = new Coint(5);
+            Coint c2 = new Coint(10);
             Banknote b1 = new Banknote(100);
             Banknote b2 = new Banknote(50);
             PaymentSystem p1 = new PaymentSystem();
-            MoneyReceiver mr1 = new MoneyReceiver();
-            mr1.AddMoney(c1);
+            MoneyReceiver mr1 = new SystemReceiptBanknotes();
+            MoneyReceiver mr2 = new SystemReceivingCoins();
             mr1.AddMoney(b1);
             mr1.AddMoney(b2);
-            mr1.ShowListMoney();
-            mr1.ShowSumMoney();
-            mr1.ShowNumberMoney();
+
+            mr2.AddMoney(c1);
+            mr2.AddMoney(c2);
+
+            p1.AddReceiver(mr1);
+            p1.AddReceiver(mr2);
+            p1.GetSum();
+            //p1.ShowListMoney();
 
             Console.WriteLine("----------");
 

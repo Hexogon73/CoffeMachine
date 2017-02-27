@@ -18,7 +18,7 @@ namespace CoffeeMachine
             Dictionary<string, Dictionary<string, int>> dict = new Dictionary<string, Dictionary<string, int>>();
            if (dr.ShowRecipe(name_recipe) == true) {
                int order_cost = dr.GetPrice(name_recipe);
-               ps.PayOrder(order_cost, mr);
+               ps.PayOrder(order_cost);
                order = dr.GetRecipe(name_recipe);
                dict.Add(order.Key, order.Value);
                foreach (var v in dict[name_recipe])

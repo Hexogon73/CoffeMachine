@@ -5,16 +5,15 @@ using System.Text;
 
 namespace CoffeeMachine
 {
-    class MoneyReceiver
+    abstract class MoneyReceiver
     {
-        public int sum; //сумма номиналов
-        protected int num; //кол-во внесенных банкнот и монет
-        List<Money> mList = new List<Money>();
+        protected int sum; //сумма номиналов
+        protected int num; //кол-во внесенных банкнот или монет
+        private List<Money> mList = new List<Money>();
 
-        public virtual int AddMoney(Money money)
-        {
-            mList.Add(money);
-            sum += money.Val;
+        public abstract int AddMoney(Money money);
+
+        public int CountSum(){
             return sum;
         }
 
@@ -27,23 +26,9 @@ namespace CoffeeMachine
             }
         }
 
-        public void ShowSumMoney()
+        public int CountNum()
         {
-            int sum = mList.Sum(x => x.Val);
-            Console.WriteLine("Сумма номиналов монет и банкнот в системе: {0}", sum);
-        }
-
-        public void ShowNumberMoney()
-        {
-            foreach (Money m in mList)
-            {
-                num = mList.Count();
-            }
-            Console.WriteLine("Количество монет и банкнот в системе: {0}", num);
-        }
-
-        public int GetSum(){
-            return sum;
+            return num;
         }
     }
 }

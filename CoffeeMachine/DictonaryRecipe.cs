@@ -5,7 +5,7 @@ using System.Text;
 
 namespace CoffeeMachine
 {
-    class DictionaryRecipe
+    public class DictionaryRecipe
     {
         private Dictionary<string, Dictionary<string, int>> dictionary = BuildDictionary();
 
